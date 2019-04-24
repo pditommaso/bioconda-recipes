@@ -1,6 +1,6 @@
 #!/bin/bash
 
 tar xvf download
-cd mlpy-3.5.0
+cd mlpy-{{ version }}
 
 $PYTHON setup.py install
