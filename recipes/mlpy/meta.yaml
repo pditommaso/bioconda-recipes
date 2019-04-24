@@ -1,6 +1,6 @@
 {% set version = "3.5.0" %}
 {% set sha256 = "344fa75fbf9f76af72f6a346d5309613defc4d244bac13c218e509a51d68bf6a" %}
-#source file is named download, has to be unpackt manually, update build sh accordingly when updating version
+#source file is named download, has to be unpacked manually, update build.sh accordingly when updating version
 
 package:
   name: mlpy
@@ -12,7 +12,6 @@ source:
 
 build:
   number: 0
-#  skip: True # [py27]
 
 requirements:
   build:
@@ -24,16 +23,17 @@ requirements:
     - scipy =0.11
     - gsl =1.16
   run:
-    - python
-    - numpy
-    - scipy
-    - gsl
+    - python >=2.6
+    - numpy =1.5
+    - scipy =0.11
+    - gsl =1.16
 
 test:
-  importss:
+  imports:
     - mlpy
 
 about:
   home: http://mlpy.sourceforge.net/index.html
   license: GPL3
+  license_file: LICENSE.txt
   summary: mlpy is a Python module for Machine Learning built on top of NumPy/SciPy and the GNU Scientific Libraries.
